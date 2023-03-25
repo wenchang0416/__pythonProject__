@@ -81,21 +81,30 @@ class Window(tk.Tk):
     def Data_wrong(self,height,weight):
         self.messageText.configure(state=tk.NORMAL)                  
         self.messageText.delete('1.0', tk.END)
-        if not height.isdigit():
+        #if not height.isdigit():
+        if not self.is_number(height):
             self.messageText.insert("insert",f"身高:'{height}', 輸入錯誤\n")   
             self.heightVar.set('')
-        if not weight.isdigit():
+        #if not weight.isdigit():
+        if not self.is_number(weight):
             self.messageText.insert("insert",f"體重:'{weight}', 輸入錯誤\n") 
             self.weightVar.set('')        
         self.messageText.configure(state=tk.DISABLED)  
 
-    def Data_click(self): 
-        if self.heightVar.get().isdigit() and self.weightVar.get().isdigit():
-            self.Bmi( self.heightVar.get(), self.weightVar.get() ) 
+    def is_number(self,string):
+        try:
+            float(string)
+            return True
+        except Exception:
+            return False
+
+
+    def Data_click(self):                 
+        #if self.heightVar.get().isdigit() and self.weightVar.get().isdigit(): 
+        if self.is_number(self.heightVar.get()) and self.is_number(self.weightVar.get()):
+            self.Bmi( self.heightVar.get(), self.weightVar.get() )
         else:
-            self.Data_wrong( self.heightVar.get(), self.weightVar.get() )  
-
-
+            self.Data_wrong( self.heightVar.get(), self.weightVar.get() ) 
 
 
 
