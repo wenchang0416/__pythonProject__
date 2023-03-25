@@ -72,7 +72,6 @@ class Window(tk.Tk):
             message="異常範圍 : 中度肥胖"
         else:
             message="異常範圍 : 重度肥胖"
-
         self.messageText.configure(state=tk.NORMAL)
         self.messageText.delete('1.0', tk.END)
         self.messageText.insert("insert",f"BMI:{bmi: .5f}, {message}") 
