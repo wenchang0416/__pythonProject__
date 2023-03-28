@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import Button,Frame
 
+
 class Window(tk.Tk):
     def __init__(self,**kwargs):
         super().__init__(**kwargs)
