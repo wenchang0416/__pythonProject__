@@ -2,6 +2,7 @@
 ## HomeWork
 ## Project
 
+![產生圖片](./images/PIC.PNG)
 ---
 ### HomeWork List
 1. 2023/03/24 : HomeWork_12_Wgrid.py
