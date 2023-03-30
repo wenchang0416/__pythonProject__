@@ -166,7 +166,7 @@ class Window(tk.Tk):
             bmiMsg=self.Bmi_msg(bmi)
             age,Constellation=self.Age_Cst(birthValue)
 
-            message  = f"{nameValue} 您好:\n"
+            message  = f"{nameValue} 您好:\n\n"
             message += f"  出生年月日: {birthValue}\n"
             message += f"  目前的年紀: {age} 歲\n"
             message += f"  星座      : {Constellation}\n"
