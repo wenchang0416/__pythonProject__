@@ -75,7 +75,7 @@ class Window(tk.Tk):
         clearButton.grid(row=0,column=1,sticky=tk.E)                #方法2
 
         #---------Image:start--------
-        logoImg=Image.open('./images/homework_13_logo.png')
+        logoImg=Image.open('./images/homework_13L.png')
         logoImg_N=logoImg.resize((300,45),Image.LANCZOS)
         self.logoTkImg=ImageTk.PhotoImage(logoImg_N)                
         logoLabel=ttk.Label(self,image=self.logoTkImg,width=180)
@@ -166,7 +166,7 @@ class Window(tk.Tk):
             bmiMsg=self.Bmi_msg(bmi)
             age,Constellation=self.Age_Cst(birthValue)
 
-            message  = f" {nameValue} 您好:\n\n"
+            message  = f"{nameValue} 您好:\n"
             message += f"  出生年月日: {birthValue}\n"
             message += f"  目前的年紀: {age} 歲\n"
             message += f"  星座      : {Constellation}\n"
