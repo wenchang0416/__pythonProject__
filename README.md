@@ -5,7 +5,7 @@
 ![產生圖片](./homeWork/images/homework_13.PNG)
 
 檔名及路徑 : HomeWork_13.py
--https://github.com/wenchang0416/__pythonProject__/blob/master/homeWork/homework_13.py
+- https://github.com/wenchang0416/__pythonProject__/blob/master/homeWork/homework_13.py
 
 ```
 from datetime import datetime
