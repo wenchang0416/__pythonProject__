@@ -59,7 +59,7 @@ class Window(tk.Tk):
         weightEntry=ttk.Entry(bottomFrame,style="gdEntry.TEntry",textvariable=self.weightVar)
         weightEntry.grid(row=4,column=1,sticky=tk.W,padx=10)
 
-        self.messageText=tk.Text(bottomFrame,height=8,width=38,state=tk.DISABLED) 
+        self.messageText=tk.Text(bottomFrame,height=7,width=38,state=tk.DISABLED) 
         self.messageText.grid(row=5,column=0,sticky=tk.N+tk.S,columnspan=2)
 
         #---------commitFrame:start--------
@@ -75,11 +75,11 @@ class Window(tk.Tk):
         clearButton.grid(row=0,column=1,sticky=tk.E)                #方法2
 
         #---------Image:start--------
-        logoImg=Image.open('./images/homework_13L.png')
-        logoImg_N=logoImg.resize((300,45),Image.LANCZOS)
+        logoImg=Image.open('./images/homework_133.jpg')
+        logoImg_N=logoImg.resize((300,50),Image.LANCZOS)
         self.logoTkImg=ImageTk.PhotoImage(logoImg_N)                
         logoLabel=ttk.Label(self,image=self.logoTkImg,width=180)
-        logoLabel.place(x=40,y=40)
+        logoLabel.place(x=42,y=40)
 
     def press_clear(self,*args) ->None:
         self.nameVar.set("")
