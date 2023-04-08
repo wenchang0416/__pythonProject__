@@ -1,9 +1,9 @@
-## sidProject
+## sideProject
 
 ---
 ## Homework
-. HomeWork13
-. HomeWork12
-. HomeWork11
+HomeWork13
+HomeWork12
+HomeWork11
 
 
