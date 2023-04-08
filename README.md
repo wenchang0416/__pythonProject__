@@ -2,9 +2,10 @@
 
 ---
 ## Homework
-#### homeWork_13
-#### homeWork_12
-#### homeWork_11
+##### homeWork_14: canvas
+##### homeWork_13: BMI,text
+##### homeWork_12: BMI,grid
+##### homeWork_11: 九宮格,pack
 
 
 
