@@ -10,8 +10,6 @@
 路徑:
 - https://github.com/wenchang0416/__pythonProject__/tree/master/homeWork/homeWork_12
 
-![產生圖片](./homeWork_12/images/homework_12.PNG)
-
 ---
 ### HomeWork_11
 路徑:
