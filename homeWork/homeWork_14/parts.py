@@ -28,7 +28,7 @@ class TopFrame(ttk.LabelFrame):
         scrollBarY = ttk.Scrollbar(self,orient='vertical',command=canvas.yview)
         scrollBarY.pack(side='right',fill='y')
         canvas.configure(xscrollcommand=scrollBarX.set,yscrollcommand=scrollBarY.set)   
-        canvas.configure(xscrollcommand=scrollBarX.set)        
+        #canvas.configure(xscrollcommand=scrollBarX.set)        
         canvas.pack()
 
 class MedianFrame(ttk.LabelFrame):
