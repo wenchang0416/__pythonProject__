@@ -3,7 +3,7 @@
 
 2-1.預設區: 信義區
 
-![產出圖片](./images/homework_15_011.PNG)
+![產出圖片](./images/homework_15_011.jpg)
 
 2-2.變更區: 士林區
 
