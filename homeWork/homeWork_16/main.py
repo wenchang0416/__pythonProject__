@@ -77,7 +77,9 @@ class Window(tk.Tk):
         for item in self.sbi_warning_data: 
             self.sbi_tree.insert('', tk.END, values=[item['sna'][11:],item['sbi'],item['bemp']]) 
 
-        self.sbi_warningFrame.pack(side=tk.LEFT,padx=20)   
+        self.sbi_warningFrame.pack(side=tk.LEFT,padx=20)  
+
+
         # bemp_warningFrame--------------------------------------
         self.bemp_warningFrame = ttk.LabelFrame(top_wrapperframe)
         columns = ('#1', '#2', '#3')
@@ -150,7 +152,7 @@ class Window(tk.Tk):
         if len(selectedTree.selection()) ==0: return       #正常selectedTree出現tuple('I001',),但有時會0
         itemTage = selectedTree.selection()[0]
         itemDic = selectedTree.item(itemTage)
-        siteName = itemDic['tags'][0]        
+        siteName = itemDic['tags'][0]   
         for item in self.area_data:
             if siteName == item['sna']:
                 select_Data = item
