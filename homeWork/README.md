@@ -1,3 +1,10 @@
+### homeWork_16
+路徑:
+- https://github.com/wenchang0416/__pythonProject__/tree/master/homeWork/homeWork_16
+
+![產生圖片](./homeWork_16/images/homework_16_021.jpg)
+
+
 ### homeWork_15
 路徑:
 - https://github.com/wenchang0416/__pythonProject__/tree/master/homeWork/homeWork_15
