@@ -3,11 +3,11 @@
 
 2-1.輸入
 
-![產出圖片](./images/homework_16_011.jpg)
+![產出圖片](./images/homework_16_011.png)
 
 2-2.變更:
 
-![產出圖片](./images/homework_16_021.jpg)
+![產出圖片](./images/homework_16_021.png)
 
 3-1.程式
 ```
