@@ -177,8 +177,7 @@ class Window(tk.Tk):
             self.tree.delete(item)  
         for item in self.area_data:
             if siteStr in item['sna'] or siteStr in item['ar']:
-                self.tree.insert('', tk.END, values=[item['sna'][11:],item['mday'],item['tot'],item['sbi'],item['bemp'],item['ar'],item['act']],tags=item['sna'])
-        
+                self.tree.insert('', tk.END, values=[item['sna'][11:],item['mday'],item['tot'],item['sbi'],item['bemp'],item['ar'],item['act']],tags=item['sna'])     
              
         for item in self.sbi_tree.get_children():
             self.sbi_tree.delete(item)
@@ -187,7 +186,16 @@ class Window(tk.Tk):
             if siteStr in item['sna']:
                 self.sbi_tree.insert('', tk.END, values=[item['sna'][11:],item['sbi'],item['bemp']]) 
                 sbi_sites_numbers += 1
-        self.sbi_warningFrame.configure(text=f"可借不足站點數:{sbi_sites_numbers}")
+        self.sbi_warningFrame.configure(text=f"可借不足站點數:{sbi_sites_numbers}")            
+             
+        for item in self.bemp_tree.get_children():
+            self.bemp_tree.delete(item)
+        bemp_sites_numbers = 0
+        for item in self.bemp_warning_data: 
+            if siteStr in item['sna']:
+                self.bemp_tree.insert('', tk.END, values=[item['sna'][11:],item['sbi'],item['bemp']]) 
+                bemp_sites_numbers += 1
+        self.bemp_warningFrame.configure(text=f"可借不足站點數:{bemp_sites_numbers}")
 
 
     def radioEvent(self):
@@ -211,20 +219,20 @@ class Window(tk.Tk):
         # Get all station data from selected area
         self.area_data = datasource.getInfoDataFromArea(area_name) 
         # Filter data with sbi warning number
-        sbi_warning_data = datasource.filter_sbi_warning_data(self.area_data,sbi_numbers)  
-        self.sbi_sites_numbers = len(sbi_warning_data)
+        self.sbi_warning_data = datasource.filter_sbi_warning_data(self.area_data,sbi_numbers)  
+        self.sbi_sites_numbers = len(self.sbi_warning_data)
         self.sbi_warningFrame.configure(text=f"可借不足站點數:{self.sbi_sites_numbers}")
         # Filter data with bemp warning number
-        bemp_warning_data = datasource.filter_bemp_warning_data(self.area_data,bemp_numbers) 
-        self.bemp_sites_numbers = len(bemp_warning_data)
+        self.bemp_warning_data = datasource.filter_bemp_warning_data(self.area_data,bemp_numbers) 
+        self.bemp_sites_numbers = len(self.bemp_warning_data)
         self.bemp_warningFrame.configure(text=f"可還不足站點數:{self.bemp_sites_numbers}")
 
         # Display data in tree view
         for item in self.area_data:
             self.tree.insert('', tk.END, values=[item['sna'][11:],item['mday'],item['tot'],item['sbi'],item['bemp'],item['ar'],item['act']],tags=item['sna'])
-        for item in sbi_warning_data:
+        for item in self.sbi_warning_data:
             self.sbi_tree.insert('', tk.END, values=[item['sna'][11:],item['sbi'],item['bemp']])        
-        for item in bemp_warning_data:
+        for item in self.bemp_warning_data:
             self.bemp_tree.insert('', tk.END, values=[item['sna'][11:],item['sbi'],item['bemp']])
 
 
