@@ -178,6 +178,16 @@ class Window(tk.Tk):
         for item in self.area_data:
             if siteStr in item['sna'] or siteStr in item['ar']:
                 self.tree.insert('', tk.END, values=[item['sna'][11:],item['mday'],item['tot'],item['sbi'],item['bemp'],item['ar'],item['act']],tags=item['sna'])
+        
+             
+        for item in self.sbi_tree.get_children():
+            self.sbi_tree.delete(item)
+        sbi_sites_numbers = 0
+        for item in self.sbi_warning_data: 
+            if siteStr in item['sna']:
+                self.sbi_tree.insert('', tk.END, values=[item['sna'][11:],item['sbi'],item['bemp']]) 
+                sbi_sites_numbers += 1
+        self.sbi_warningFrame.configure(text=f"可借不足站點數:{sbi_sites_numbers}")
 
 
     def radioEvent(self):
